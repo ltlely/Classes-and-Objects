@@ -1,0 +1,54 @@
+public class Team {
+   // TODO: Declare private fields - name, wins, losses
+   String name;
+   int wins;
+   int losses;
+   
+   // TODO: Define mutator methods - 
+   //       setName(), setWins(), setLosses()
+   public void setName(String userName) {
+      name = userName;
+   }
+   
+   public void setWins(int userWins) {
+      wins = userWins;
+   }
+   
+   public void setLosses(int userLosses) {
+      losses = userLosses;
+   }
+   
+   // TODO: Define accessor methods - 
+   //       getName(), getWins(), getLosses()
+   public String getName() {
+      return name;   
+   }
+   
+   public int getWins() {
+      return wins;   
+   } 
+   
+   public int getLosses() {
+      return losses;
+   }
+   
+   // TODO: Define getWinPercentage()
+   
+   public double getWinPercentage() {
+      double percentage = (double) wins / (wins + losses);
+      return percentage;
+   }
+   
+   // TODO: Define printStanding()
+   public void printStanding() {
+      double percentage = getWinPercentage();
+      System.out.printf ("Win percentage: " + "%.2f" , getWinPercentage());
+      if (percentage >= 0.5) {
+            System.out.println("\nCongratulations, Team " + name + " has a winning average!");
+        }else {
+            System.out.println("\nTeam " + name + " has a losing average.");
+        }
+    
+   }
+   
+}
