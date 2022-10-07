@@ -1,0 +1,36 @@
+/* 
+
+Given two integers as user inputs that represent the number of drinks to buy and the number of bottles to restock, create a VendingMachine object that performs the following operations:
+
+    Purchases input number of drinks
+    Restocks input number of bottles
+    Reports inventory
+
+The VendingMachine is found in VendingMachine.java. A VendingMachine's initial inventory is 20 drinks.
+
+INPUT: 5 2
+OUTPUT: Inventory: 17 bottles */
+
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      
+      /* Type your code here. */ 
+      VendingMachine v1 = new VendingMachine();
+      
+      //System.out.println ("How many drinks would you like to buy?");
+      int drinks = scnr.nextInt();
+      
+      //System.out.println ("How many would you like to restock?");
+      int restockBot = scnr.nextInt();
+      
+      v1.purchase(drinks); 
+		v1.restock(restockBot);
+		
+		/* Report Inventory */
+		v1.report();
+      
+   }
+}
